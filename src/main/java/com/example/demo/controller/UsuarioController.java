@@ -24,6 +24,6 @@ public class UsuarioController {
 
     @GetMapping("/teste")
     public String teste(){
-        return "Teste desta";
+        return "Teste desta vez com essa frase";
     }
 }
