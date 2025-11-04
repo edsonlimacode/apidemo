@@ -21,4 +21,9 @@ public class UsuarioController {
     public List<Usuario> listar(){
         return this.usuarioRepository.findAll();
     }
+
+    @GetMapping("/teste")
+    public String teste(){
+        return "Teste";
+    }
 }
