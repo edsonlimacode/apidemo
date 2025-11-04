@@ -29,7 +29,7 @@ public class UsuarioController {
 
     @GetMapping("/teste2")
     public String teste2(){
-        return "Teste2 atualizado";
+        return "Teste2 atualizado com sucesso, agora vai funcionar!";
     }
 
 }
