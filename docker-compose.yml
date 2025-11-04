@@ -17,9 +17,9 @@ services:
   apidemo:
     image: edsonlima95/apidemo:latest
     restart: always
-    build:
-        context: .
-        dockerfile: Dockerfile
+#    build:
+#        context: .
+#        dockerfile: Dockerfile
     working_dir: /apidemo
     environment:
       TZ: America/Sao_Paulo
@@ -33,6 +33,19 @@ services:
       - db
     networks:
       - edson-network
+  portainer:
+    image: portainer/portainer-ce:latest
+    restart: always
+    ports:
+      - 9000:9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    networks:
+      - edson-network
+volumes:
+  portainer_data:
+
 networks:
   edson-network:
     driver: bridge
