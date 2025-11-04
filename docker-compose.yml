@@ -15,7 +15,7 @@ services:
     networks:
       - edson-network
   apidemo:
-    image: edsonlima95/apidemo
+    image: edsonlima95/apidemo:latest
     restart: always
     build:
         context: .
