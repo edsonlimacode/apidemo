@@ -17,8 +17,8 @@ services:
   apidemo:
     image: edsonlima95/apidemo
     restart: always
-    build: ./demo
-    working_dir: /demo
+    build: ./
+    working_dir: /
     environment:
       TZ: America/Sao_Paulo
       SPRING.DATASOURCE.URL: jdbc:mysql://db:3306/mydbtestes?useTimezone=true&serverTimezone=UTC
