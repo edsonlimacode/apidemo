@@ -23,11 +23,11 @@ jobs:
           java-version: '21'
 
       - name: Build Application .jar
-        working-directory: ./demo
+        working-directory: ./apidemo
         run: mvn clean package
 
       - name: Docker Compose Build
-        working-directory: /demo
+        working-directory: ./apidemo
         run: docker compose build
 
       - name: Push to Docker Hub Container Registry
